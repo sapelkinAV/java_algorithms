@@ -2,9 +2,11 @@ package sort.insertionsort;
 
 import sort.quicksort.QuickSort;
 
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -17,6 +19,8 @@ public class InsertionTest {
         for(int i =0;i<1000000;++i) {
             arrayList.add(random.nextInt(10000)+10);
         }
-        (new InsertionSort<Integer>(arrayList).sort()).forEach(System.out::println);
+        //(new InsertionSort<Integer>(arrayList).sort()).forEach(System.out::println);
+        Collections.sort(arrayList);
+        arrayList.forEach(System.out::println);
     }
 }

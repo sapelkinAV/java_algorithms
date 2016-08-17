@@ -21,7 +21,7 @@ public class InsertionSort<T extends Comparable<T>> {
         for(int j = 1; j < array.size();j++) {
             key = array.get(j);
             int i = j - 1;
-            while ((i > -1) && (array.get(i).compareTo(key) < 0)) {
+            while ((i > -1) && (array.get(i).compareTo(key) > 0)) {
                 array.set(i + 1, array.get(i));
                 i--;
             }
